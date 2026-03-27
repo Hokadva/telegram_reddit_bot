@@ -1,12 +1,8 @@
-from data_base_manage import Database
+from models import DatabaseSubreddits, SuperUserDatabase
 
+DATABASE_U = SuperUserDatabase('database')
+DATABASE_S = DatabaseSubreddits('database')
 
-DATABASE = Database('subreddits')
+DATABASE_U.add_record('hokadva', '687994915')
 
-while True:
-    new_value = input()
-    if new_value == 'q':
-        break
-    DATABASE.add_record(new_value)
-
-DATABASE.close()
+DATABASE_U.close()

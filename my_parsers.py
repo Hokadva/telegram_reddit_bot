@@ -3,13 +3,13 @@ import random
 from bs4 import BeautifulSoup
 import io
 from io import BytesIO
-from data_base_manage import Database
+from models import DatabaseSubreddits
 
 
 class Parser():
     def __init__(self, URL):
         self.folder_url = URL
-        self.DATABASE = Database('subreddits')
+        self.DATABASE = DatabaseSubreddits('database')
 
 
     def get_reserve_image(self):
